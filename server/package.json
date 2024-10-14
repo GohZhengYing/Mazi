@@ -1,0 +1,10 @@
+{
+  "name":"mazi-client",
+  "version":"0.1.0",
+  "licence":"UNLICENSED",
+  "private": true,
+  
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
