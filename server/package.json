@@ -1,12 +1,13 @@
 {
-  "name":"mazi-client",
-  "version":"0.1.0",
-  "licence":"UNLICENSED",
+  "name": "mazi-client",
+  "version": "0.1.0",
+  "licence": "UNLICENSED",
   "private": true,
-    "scripts": {
+  "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "next": "^15.0.1"
   }
 }
