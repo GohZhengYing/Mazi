@@ -1,9 +1,8 @@
 import { useState ,React} from 'react';
-import styles from '../styles/component.module.css';
-import Sidebar from '../components/sidebar'
-import ChatList from '../components/page'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Provider } from "../components/ui/provider"
+import styles from '../../styles/component.module.css';
+import Sidebar from '../../components/sidebar'
+import ChatList from '../../components/page'
+import { Provider } from "../../components/ui/provider"
 
 export default function Page() {
   const [isCollapsed, setIsCollapsed] = useState(false);

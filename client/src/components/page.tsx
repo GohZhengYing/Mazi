@@ -47,7 +47,7 @@ export default function ChatList() {
             color={selectedChat?.id === chat.id ? 'white' : 'black'}
             cursor="pointer"
             _hover={{ bg: 'gray.300' }}
-            gap="1"
+            gap="4"
           >
             <Avatar name={chat.name} size="lg" />
           <Stack gap="0">
