@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import { theme } from '../theme';
 
 export default function Home() {
   return (
+      <ChakraProvider theme={theme}>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -127,5 +130,6 @@ export default function Home() {
         }
       `}</style>
     </div>
+    </ChakraProvider>
   );
 }
