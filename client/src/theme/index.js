@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 
-export const theme = extendTheme({
+export const theme = {
   colors: {
     primary: {
       main: '#134999',
@@ -34,5 +34,10 @@ export const theme = extendTheme({
     heading: 'system-ui, sans-serif',
     mono: 'Menlo, monospace',
   },
+  config: {
+    useSystemColorMode: false, // or true
+    initialColorMode: "light", // or "dark"
+    cssVarPrefix: "chakra", // any string
+  },
   shadows: { outline: '0 0 0 1px var(--chakra-colors-primary-main)' },
-});
+};
