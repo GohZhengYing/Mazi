@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from 'next/router';
-import { LoadingPage } from "../components/LoadingPage";
+import LoadingPage from "../components/loading/LoadingPage";
 
 const PageNavigation = ({
   children,

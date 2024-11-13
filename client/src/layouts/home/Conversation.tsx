@@ -6,7 +6,7 @@ import MessagesInputBox from '@/components/home/MessagesInputBar';
 
 const Conversation = () => {
     return(
-        <VStack w="1000px" margin="auto" h='100%'>
+        <VStack w="80%" margin="auto" h='100%'>
             <ProfileTopBar></ProfileTopBar>
             <Messages></Messages>
             <MessagesInputBox></MessagesInputBox>

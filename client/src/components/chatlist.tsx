@@ -28,7 +28,7 @@ export default function ChatList() {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
-        <Stack bg="#CDF0FF" h="100vh" alignItems="center">
+        <Stack bg="#CDF0FF" h="100vh" alignItems="center" w="20%">
             {/* Search Bar */}
             <Box h="3.7rem" fontSize="1.2rem" fontWeight="bold" textAlign="center" paddingTop="1.3rem">Chats</Box>
             <Input
@@ -44,7 +44,7 @@ export default function ChatList() {
                 mt="0"
                 w="93%"
             />
-<Separator borderColor="white" size="s" />
+<Separator borderColor="white" size="sm" />
             {/* Chat List */}
             <VStack bg="white" w="100%" gap="0">
                 {filteredChats.map(chat => (
@@ -71,7 +71,7 @@ export default function ChatList() {
                                 <Badge mt="1" mb="1.5" bg="#24BDFF" borderRadius="4rem">205</Badge>}
                             </VStack>
                         </HStack>
-                        <Separator borderColor="white" size="s" />
+                        <Separator borderColor="white" size="sm" />
                     </React.Fragment>
                 ))}
             </VStack>
