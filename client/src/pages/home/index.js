@@ -1,7 +1,7 @@
 import { useState ,React} from 'react';
 import styles from '../../styles/component.module.css';
 import Sidebar from '../../components/sidebar'
-import Page from '../../components/page'
+import HomePage from '../../components/HomePage'
 import { Provider } from "../../components/ui/provider"
 import { HStack, VStack, Box } from '@chakra-ui/react';
 
@@ -17,7 +17,7 @@ export default function Home() {
       <Sidebar onToggle={handleSidebarToggle} isCollapsed={isCollapsed} />
 
       <Box className={`${styles.content} ${isCollapsed ? styles.contentCollapsed : styles.contentExpanded}`} >
-        <Page />
+        <HomePage />
       </Box>
     </HStack></Provider>
   );

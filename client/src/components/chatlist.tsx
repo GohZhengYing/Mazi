@@ -30,7 +30,7 @@ export default function ChatList() {
     return (
         <Stack bg="#CDF0FF" h="100vh" alignItems="center">
             {/* Search Bar */}
-            <Box h="4.5rem" fontSize="1.2rem" fontWeight="bold" textAlign="center" paddingTop="0.5rem">Chats</Box>
+            <Box h="3.7rem" fontSize="1.2rem" fontWeight="bold" textAlign="center" paddingTop="1.3rem">Chats</Box>
             <Input
                 placeholder="Search"
                 bg="#FFFFFF"
