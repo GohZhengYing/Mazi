@@ -1,10 +1,11 @@
 import { useState ,React} from 'react';
 import styles from '../../styles/component.module.css';
 import Sidebar from '../../components/sidebar'
-import ChatList from '../../components/page'
+import Page from '../../components/page'
 import { Provider } from "../../components/ui/provider"
+import { HStack, VStack, Box } from '@chakra-ui/react';
 
-export default function Page() {
+export default function Home() {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleSidebarToggle = (collapsed) => {
@@ -12,12 +13,12 @@ export default function Page() {
   };
   return (
     <Provider>
-    <div className={`container ${styles.container}`}>
+    <HStack className={`${styles.container}`}  bg="#ABCDEF" h="100vh">
       <Sidebar onToggle={handleSidebarToggle} isCollapsed={isCollapsed} />
 
-      <div className={`${styles.content} ${isCollapsed ? styles.contentCollapsed : styles.contentExpanded}`}>
-        <ChatList />
-      </div>
-    </div></Provider>
+      <Box className={`${styles.content} ${isCollapsed ? styles.contentCollapsed : styles.contentExpanded}`} >
+        <Page />
+      </Box>
+    </HStack></Provider>
   );
 }
