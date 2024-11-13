@@ -8,11 +8,11 @@ const MessagesInputBox = () => {
         
     }
     return(
-        <HStack bgColor="#CDF0FF" h="5vh" w="100%">
+        <HStack bgColor="#CDF0FF" h="5%" w="100%">
             <IconButton  bgColor="transparent" color="black" onClick={handleOnClick}>
                 <LuPlus />
             </IconButton>
-            <Input  placeholder="..."></Input >
+            <Input  placeholder="..." bgColor="white" margin="0.5rem"></Input >
         </HStack>
     )
 }
