@@ -7,6 +7,7 @@ const LoginPageLayout = ()=>{
             <VStack>
                 <Text position='relative' fontSize='4rem' fontFamily='sans-serif' marginBottom="5rem">Mazi</Text>
                 <LoginForm/>
+                <Link href="./signup">Create Account</Link>
                 <Link href="./password-reset">Forgotten Password</Link>
             </VStack>
         </Box>
