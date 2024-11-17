@@ -11,9 +11,11 @@
 
 .contentExpanded {
   margin-left: 5rem;
+  width: 100%;
 }
 
 
 .contentCollapsed {
   margin-left: 0rem;
+  width: 100%;
 }

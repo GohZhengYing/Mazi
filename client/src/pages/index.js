@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { ChakraProvider } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { Provider } from "@/components/ui/provider"
 import { theme } from '../theme/index.js';
 
 export default function Home() {
+  const router = useRouter()
+  router.push('/login')
   return (
       <Provider theme={theme}>
-    <div className={styles.container}>
+    {/* <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,7 +17,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Mazi!</a>
         </h1>
 
         <p className={styles.description}>
@@ -130,7 +132,7 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </div> */}
     </Provider>
   );
 }
