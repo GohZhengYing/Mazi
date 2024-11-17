@@ -47,7 +47,7 @@ const Messages = (props) => {
     },[])
 
     return(
-        <VStack w="100%" display="block" h="90%" alignContent="start" borderWidth="0px" overflowY="scroll" paddingTop="30%" bgColor="#CDF0FF">
+        <VStack w="100%" display="block" h="90%" alignContent="start" borderWidth="0px" overflowY="scroll" paddingTop="30%" bgColor="#CDF0FF" scrollbarWidth='thin'>
             {messageLoad}
         </VStack>
     )

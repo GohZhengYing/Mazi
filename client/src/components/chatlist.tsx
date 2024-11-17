@@ -56,7 +56,7 @@ export default function ChatList() {
             />
 <Separator borderColor="white" size="sm" />
             {/* Chat List */}
-            <VStack bg="white" w="100%" gap="0" overflow="scroll">
+            <VStack bg="white" w="100%" gap="0" overflowY="scroll" scrollbarWidth='thin'>
                 {filteredChats.map(chat => (
                     <React.Fragment>
                         <HStack
