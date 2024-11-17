@@ -21,6 +21,8 @@
     padding-bottom: 0rem;
     object-position: center;
     transform: scale(1.13);
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
   }
 
   .contacts {
@@ -31,6 +33,8 @@
   .collapsed {
     width: 0px; 
     color: black;
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
   }
   
   .collapsedMenu {
@@ -55,6 +59,8 @@
     max-width: 4.5rem;
     min-width: 2.5rem;
     padding: 1rem;
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
   }
   
   .settings {
@@ -63,4 +69,6 @@
     min-width: 2.5rem;
     padding: 1rem;
     margin-top: auto;
+    -webkit-filter: invert(90%);
+    filter: invert(90%);
   }
