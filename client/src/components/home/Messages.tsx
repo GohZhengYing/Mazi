@@ -1,83 +1,53 @@
 import { useEffect, useState} from 'react';
-import { Card, HStack, Stack, VStack } from "@chakra-ui/react"
+import { Box, Card, HStack, Stack, VStack, Text, Link } from "@chakra-ui/react"
+import { addDateCard, addReceiverMessageCard, addSenderMessageCard } from '@/services/messages/MessageCards';
 
 const Messages = (props) => {
     const [messageLoad,setMessageLoad] = useState([])
 
+
+
     useEffect(()=>{
-        setMessageLoad(
-            [
-                <Card.Root w="fit-content" h="fit-content" borderRadius="10px" margin="3px" textAlign="center" placeSelf="center" bgColor="#C0E0EE" borderWidth="0px">
-                <Card.Body verticalAlign="middle" padding="10px">
-                    11 December
-                </Card.Body >
-              </Card.Root>,
-                <Card.Root w="60%" h="fit-content" borderRadius="10px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                <Card.Body verticalAlign="middle">
-                    Hi this is from Tom
-                </Card.Body >
-              </Card.Root>,
-            <Card.Root w="60%" h="fit-content" borderRadius="10px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-            <Card.Body verticalAlign="middle">
-                Hi Tom, This is Lisa
-            </Card.Body >
-        </Card.Root>,
-                        <Card.Root w="60%" h="fit-content" borderRadius="10px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                        <Card.Body verticalAlign="middle">
-                            Hi this is from Tom
-                        </Card.Body >
-                      </Card.Root>,
-                    <Card.Root w="60%" h="fit-content" borderRadius="10px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                    <Card.Body verticalAlign="middle">
-                        Hi Tom, This is Lisa
-                    </Card.Body >
-                </Card.Root>,
-                <Card.Root w="60%" h="fit-content" borderRadius="10px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                <Card.Body verticalAlign="middle">
-                    Hi this is from Tom
-                </Card.Body >
-            </Card.Root>,
-            <Card.Root w="60%" h="fit-content" borderRadius="10px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-            <Card.Body verticalAlign="middle">
-                Hi Tom, This is Lisa
-            </Card.Body >
-        </Card.Root>,
-                        <Card.Root w="60%" h="fit-content" borderRadius="10px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                        <Card.Body verticalAlign="middle">
-                            Hi this is from Tom
-                        </Card.Body >
-                    </Card.Root>,
-                    <Card.Root w="60%" h="fit-content" borderRadius="10px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                    <Card.Body verticalAlign="middle">
-                        Hi Tom, This is Lisa
-                    </Card.Body >
-                </Card.Root>,
-                              <Card.Root w="60%" h="fit-content" borderRadius="10px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                              <Card.Body verticalAlign="middle">
-                                  Hi this is from Tom
-                              </Card.Body >
-                            </Card.Root>,
-                          <Card.Root w="60%" h="fit-content" borderRadius="01px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                          <Card.Body verticalAlign="middle">
-                              Hi Tom, This is Lisa
-                          </Card.Body >
-                      </Card.Root>,
-                                      <Card.Root w="60%" h="fit-content" borderRadius="01px" float="left" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                                      <Card.Body verticalAlign="middle">
-                                          Hi this is from Tom
-                                      </Card.Body >
-                                    </Card.Root>,
-                                  <Card.Root w="60%" h="fit-content" borderRadius="01px" float="right" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
-                                  <Card.Body verticalAlign="middle">
-                                      Hi Tom, This is Lisa
-                                  </Card.Body >
-                              </Card.Root>
-            ]
-        )
+        async function retrieveMessages(){
+            const messages = props.messages
+            const processedMessageLoad = []
+            for(let i=0;i<messages.length;i++){
+                if(i===0){
+                    processedMessageLoad.push(addDateCard(messages[i].date))
+
+                }
+                else if(messages[i].date!=messages[i-1].date){
+                    processedMessageLoad.push(addDateCard(messages[i].date))
+
+                }
+
+                if(messages[i].self){
+                    processedMessageLoad.push(addSenderMessageCard(messages[i].msg,messages[i].time))
+
+                }
+                else{
+                    processedMessageLoad.push(addReceiverMessageCard(messages[i].msg,messages[i].time))
+
+                }
+            }
+            setMessageLoad(processedMessageLoad)
+
+        }
+
+        retrieveMessages()
+
+        const scrollToBottom = () => {
+            console.log('here')
+            window.scrollTo({
+              top: 200,
+              behavior: 'smooth',
+            });
+          };
+          scrollToBottom()
     },[])
 
     return(
-        <VStack w="100%" display="block" h="90%" alignContent="end" borderWidth="0px" overflowY="scroll" paddingTop="30%" bgColor="#CDF0FF">
+        <VStack w="100%" display="block" h="90%" alignContent="start" borderWidth="0px" overflowY="scroll" paddingTop="30%" bgColor="#CDF0FF">
             {messageLoad}
         </VStack>
     )

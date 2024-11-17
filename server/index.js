@@ -5,6 +5,7 @@ const APIStack = require('./src/API/APIStack')
 const userRouter = require('./src/API/routes/user')
 const contactsRouter = require('./src/API/routes/contacts')
 const authRouter = require('./src/API/routes/auth')
+const messagesRouter = require('./src/API/routes/messages')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const helmet = require('helmet')
@@ -40,6 +41,7 @@ app.get('/', (req, res) => {
 app.use('/user',userRouter)
 app.use('/contacts',contactsRouter)
 app.use('/auth',authRouter)
+app.use('/messages',messagesRouter)
 
 async function start (){
   try {
