@@ -22,7 +22,7 @@ export default function Home() {
       <HStack className={`${styles.container}`}  bgColor="white" h="100vh" w='100vw'>
       <Sidebar onToggle={handleSidebarToggle} isCollapsed={isCollapsed} setActiveTab={setActiveTab}/>
       <Box className={`${styles.content} ${isCollapsed ? styles.contentCollapsed : styles.contentExpanded}`} >
-      <HStack h="100vh">
+      <HStack h="100vh" gap='1'>
       {activeTab === 'chat' && <Chatlist/>}
         {activeTab === 'contacts' && <Contacts/>}
         {activeTab === 'community' && <Community/>}

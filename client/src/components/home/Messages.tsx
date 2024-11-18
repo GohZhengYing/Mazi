@@ -37,7 +37,6 @@ const Messages = (props) => {
         retrieveMessages()
 
         const scrollToBottom = () => {
-            console.log('here')
             window.scrollTo({
               top: 200,
               behavior: 'smooth',
