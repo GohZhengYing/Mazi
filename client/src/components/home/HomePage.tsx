@@ -12,7 +12,7 @@ export default function HomePage() {
 
   return (
     <Validate>
-    <HStack h="100vh" w='100%'>
+    <HStack h="100vh" w='100%' gap='0'>
       <Chatlist></Chatlist>
       <Conversation/>
     </HStack>

@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import { Button, HStack, IconButton, Input, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, PopoverCloseTrigger, Box, Image, VStack, Text} from "@chakra-ui/react"
+import { Button, HStack, IconButton, Input, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, PopoverCloseTrigger, Box, Image, VStack, Text, Icon} from "@chakra-ui/react"
 import { LuPlus } from "react-icons/lu";
 import api from '../../services/API'
 import { InputGroup } from "@/components/ui/input-group"
@@ -33,7 +33,7 @@ const MessagesInputBox = (props) => {
                 100,
                 0,
                 (uri) => {
-                    setImageInput({file:e.target.value,uri:uri})
+                    setImageInput({file:e.target.value,uri:String(uri)})
                 },
                 "base64"
               );
@@ -99,9 +99,9 @@ const MessagesInputBox = (props) => {
         <HStack bgColor="#CDF0FF" h="5%" w="100%">
             <PopoverRoot>
   <PopoverTrigger>
-  <IconButton  bgColor="transparent" color="black" onClick={handleOnClick}>
+  <Icon  bgColor="transparent" color="black" onClick={handleOnClick} marginLeft={'1rem'} marginRight={'1rem'}>
                 <LuPlus />
-            </IconButton>
+            </Icon>
   </PopoverTrigger>
   <PopoverContent position='absolute' bottom='2.5rem'>
     <VStack h="fit-content" maxH='50%' w='100%' bgColor='#e4ebea' borderRadius='2%' padding={'1rem'} >
