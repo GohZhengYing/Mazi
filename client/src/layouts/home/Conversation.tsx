@@ -1,5 +1,5 @@
 import { useEffect, useState} from 'react';
-import { HStack, Stack, VStack } from "@chakra-ui/react"
+import { HStack, Stack, VStack, Separator } from "@chakra-ui/react"
 import ProfileTopBar from '@/components/home/ProfileTopBar';
 import Messages from '@/components/home/Messages';
 import MessagesInputBox from '@/components/home/MessagesInputBar';
@@ -16,9 +16,11 @@ const Conversation = (props) => {
       },[])
 
     return(
-        <VStack w="80%" h='100%' gap='1'>
+        <VStack w="80%" h='100%' gap='0'>
             <ProfileTopBar receiverUsername={receiverUsername}/>
+            <Separator borderColor="white" size="sm"/>
             <Messages messages={messages}/>
+            <Separator borderColor="white" size="sm"/>
             <MessagesInputBox senderEmail={senderEmail} receiverEmail={receiverEmail}/>
         </VStack>
     )

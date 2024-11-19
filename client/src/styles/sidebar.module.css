@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 80px;
+    width: 3.5rem;
     background-color: #343a40;
     color: white;
     position: fixed;
+    align-items: center;
     top: 0;
     left: 0;
     transition: width 0.3s, margin-left 0.3s;
@@ -15,9 +16,9 @@
   .navButton {
     position: absolute;
     cursor: pointer;
-    max-width: 4.5rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 1rem;
+    padding: 0.3rem;
     padding-bottom: 0rem;
     object-position: center;
     transform: scale(1.13);
@@ -32,7 +33,9 @@
 
   .collapsed {
     width: 0px; 
-    color: black;
+    color: white;
+    background-color: white;
+    align-items:normal;
     -webkit-filter: invert(90%);
     filter: invert(90%);
   }
@@ -46,7 +49,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
-    padding-top: 4rem;
+    padding-top: 2.5rem;
   }
   
   .menu ul {
@@ -56,19 +59,21 @@
 
   .menu ul li img {
     cursor: pointer;
-    max-width: 4.5rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 1rem;
+    padding: 0.3rem;
+    margin-top: 0.2rem;
     -webkit-filter: invert(90%);
     filter: invert(90%);
   }
   
   .settings {
     cursor: pointer;
-    max-width: 4.5rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 1rem;
+    padding: 0.3rem;
     margin-top: auto;
+    margin-bottom: 0.5rem;
     -webkit-filter: invert(90%);
     filter: invert(90%);
   }

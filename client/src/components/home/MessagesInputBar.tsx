@@ -96,7 +96,7 @@ const MessagesInputBox = (props) => {
         
 
     return(
-        <HStack bgColor="#CDF0FF" h="5%" w="100%">
+        <HStack bgColor="#CDF0FF" h="2.5rem" w="100%">
             <PopoverRoot>
   <PopoverTrigger>
   <Icon  bgColor="transparent" color="black" onClick={handleOnClick} marginLeft={'1rem'} marginRight={'1rem'}>
@@ -126,7 +126,8 @@ const MessagesInputBox = (props) => {
                 onChange={(event)=>{setMessageInput(event.target.value)}}
                 placeholder="Enter Message"
                 name="messageInput"
-                bgColor="white" 
+                bgColor="#CDF0FF" 
+                variant="flushed" 
                 onSubmit={handleOnSubmit}
             />
             </InputGroup>:
