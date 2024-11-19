@@ -16,9 +16,9 @@
   .navButton {
     position: absolute;
     cursor: pointer;
-    max-width: 2.8rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     padding-bottom: 0rem;
     object-position: center;
     transform: scale(1.13);
@@ -59,19 +59,21 @@
 
   .menu ul li img {
     cursor: pointer;
-    max-width: 2.8rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
+    margin-top: 0.2rem;
     -webkit-filter: invert(90%);
     filter: invert(90%);
   }
   
   .settings {
     cursor: pointer;
-    max-width: 2.8rem;
+    max-width: 2.5rem;
     min-width: 2.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin-top: auto;
+    margin-bottom: 0.5rem;
     -webkit-filter: invert(90%);
     filter: invert(90%);
   }
