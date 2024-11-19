@@ -127,7 +127,7 @@ const MessagesInputBox = (props) => {
                 placeholder="Enter Message"
                 name="messageInput"
                 bgColor="#CDF0FF" 
-                variant="flushed" 
+                variant="subtle" 
                 onSubmit={handleOnSubmit}
             />
             </InputGroup>:
