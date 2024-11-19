@@ -1,7 +1,7 @@
 import { useState ,React} from 'react';
 import styles from '@/styles/component.module.css';
 import Sidebar from '@/components/sidebar'
-import { HStack, VStack, Box } from '@chakra-ui/react';
+import { HStack, VStack, Box, Separator } from '@chakra-ui/react';
 
 import Chatlist from '@/components/chatlist'
 import Conversation from '@/layouts/home/Conversation';
@@ -22,12 +22,12 @@ export default function Home() {
       <HStack className={`${styles.container}`}  bgColor="white" h="100vh" w='100vw'>
       <Sidebar onToggle={handleSidebarToggle} isCollapsed={isCollapsed} setActiveTab={setActiveTab}/>
       <Box className={`${styles.content} ${isCollapsed ? styles.contentCollapsed : styles.contentExpanded}`} >
-      <HStack h="100vh" gap='1'>
+      <HStack h="100vh" gap="0">
       {activeTab === 'chat' && <Chatlist/>}
         {activeTab === 'contacts' && <Contacts/>}
         {activeTab === 'community' && <Community/>}
         {activeTab === 'settings' && <Settings/>}
-      
+      <Separator orientation="vertical" borderColor="white" size="sm"/>
       <Conversation/>
       </HStack>
       </Box>

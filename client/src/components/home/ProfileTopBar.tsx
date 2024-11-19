@@ -21,7 +21,7 @@ const ProfileTopBar = (props) => {
         
     }
     return(
-        <HStack bgColor="#CDF0FF" h="5%" w="100%" justifyContent="space-between" verticalAlign="middle">
+        <HStack bgColor="#CDF0FF" h="2.5rem" w="100%" justifyContent="space-between" verticalAlign="middle">
             <Box margin="10px" display="flex" alignItems="center" >
                 <Icon fontSize="2rem" color="pink.400">
                     <FaUserCircle />

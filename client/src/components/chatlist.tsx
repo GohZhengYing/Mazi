@@ -40,7 +40,8 @@ export default function ChatList() {
     return (
         <Stack bg="#CDF0FF" h="100vh" alignItems="center" w="20%" gap="0">
             {/* Search Bar */}
-            <Box h="3.7rem" fontSize="1.2rem" fontWeight="bold" textAlign="center" p="1.5rem">Chats</Box>
+            <Box h="2.5rem" fontSize="1.2rem" fontWeight="bold" textAlign="center" p="0.5rem">Chats</Box>
+            <Separator borderColor="white" size="sm" />
             <Input
                 placeholder="Search"
                 bg="#FFFFFF"
@@ -54,9 +55,9 @@ export default function ChatList() {
                 m="0.5rem"
                 w="93%"
             />
-<Separator borderColor="white" size="sm" />
+            <Separator borderColor="white" size="sm" />
             {/* Chat List */}
-            <VStack bg="white" w="100%" gap="" overflowY="scroll" scrollbarWidth='thin'>
+            <VStack bg="white" w="100%" gap="0" overflowY="scroll" scrollbarWidth='thin'>
                 {filteredChats.map(chat => (
                     <React.Fragment>
                         <HStack
