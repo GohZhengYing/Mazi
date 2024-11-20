@@ -36,7 +36,7 @@ app.use(bodyParser.json({
 
 //routes
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Server is alive')
 })
 app.use('/user',userRouter)
 app.use('/contacts',contactsRouter)

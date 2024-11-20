@@ -27,6 +27,8 @@ const SignupForm = ()=>{
           password:password
         })
         console.log(response.data)
+        localStorage.setItem('MaziToken',response.data.token)
+        localStorage.setItem('MaziEmail',response.data._doc.email)
         router.push('/home')
       } catch (error) {
         console.log(error)
