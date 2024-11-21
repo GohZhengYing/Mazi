@@ -5,7 +5,6 @@ import { HiOutlineDotsVertical } from "react-icons/hi";
 import { useRouter } from 'next/router';
 
 const ProfileTopBar = (props) => {
-    const [username,setUsername] = useState(props.receiverUsername)
     const router = useRouter()
 
     const logout = ()=>{
@@ -15,8 +14,8 @@ const ProfileTopBar = (props) => {
     }
 
     useEffect(()=>{
-        setUsername(props.receiverUsername)
-    },[username])
+
+    },[])
     const handleOnClick = ()=>{
         
     }
@@ -26,7 +25,7 @@ const ProfileTopBar = (props) => {
                 <Icon fontSize="2rem" color="pink.400">
                     <FaUserCircle />
                 </Icon>
-                <Text fontSize='1.5rem' margin="auto" marginLeft="0.5em">{username}</Text>
+                <Text fontSize='1.5rem' margin="auto" marginLeft="0.5em">{props.receiverUsername}</Text>
             </Box>
 <Box h='100%' w='fit-content'>
 

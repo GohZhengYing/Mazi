@@ -4,7 +4,7 @@ export const addSenderMessageCard = (message,time)=>{
     return(
         <Box w='100%' flexDirection='row' display='flex' justifyContent='right'>
             
-            <Card.Root w="70%" minH="3rem" borderRadius="10px" margin="10px" bgColor="#6BEA97" borderWidth="0px">
+            <Card.Root w="70%" minH="3rem" borderRadius="10px" margin="0.3rem" bgColor="#6BEA97" borderWidth="0px">
             <HStack w='100%' h='100%' gap='0'>
                 <Card.Body verticalAlign="middle" w='90%' margin='0px'>
                     {message}
@@ -22,7 +22,7 @@ export const addSenderMessageCard = (message,time)=>{
 export const addReceiverMessageCard = (message,time)=>{
     return(
         <Box w='100%' flexDirection='row' display='flex' justifyContent='left'>
-        <Card.Root w="70%" minH="3rem" borderRadius="10px" margin="10px" bgColor="#C0E0EE" borderWidth="0px">
+        <Card.Root w="70%" minH="3rem" borderRadius="10px" margin="0.3rem" bgColor="#C0E0EE" borderWidth="0px">
         <HStack w='100%' h='100%' gap='0'>
             <Card.Body verticalAlign="middle" w='90%' margin='0px'>
                 {message}
@@ -48,3 +48,12 @@ export const addDateCard = (date)=>{
     )
 }
 
+export const addNewMessagesCard = ()=>{
+    return(
+        <Card.Root w="100%" h="fit-content" borderRadius="0px" marginTop ="1rem" marginBottom ="1rem" textAlign="center" placeSelf="center" bgColor="#d6d6d6" borderWidth="0px">
+        <Card.Body verticalAlign="middle" padding="10px" color='black'>
+            New Messages
+        </Card.Body >
+      </Card.Root>
+    )
+}

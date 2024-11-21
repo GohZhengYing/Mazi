@@ -17,6 +17,10 @@ const userSchema = mongoose.Schema({
         type:Array,
         required:[true,"please provide mailbox"]
     },
+    webhookEndpoint:{
+        type:String,
+        required:[true,"please provide webhookEndpoint"]
+    },
 }, { collection: 'user' })
 
 module.exports = mongoose.model("User",userSchema)

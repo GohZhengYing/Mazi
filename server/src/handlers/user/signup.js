@@ -17,7 +17,8 @@ const signup = async (req,res) =>{
                 username,
                 email,
                 password:encryptedPassword,
-                mailbox:[]
+                mailbox:[],
+                webhookEndpoint:req.headers.origin
             })
 
             const response2 = await Contacts.create({

@@ -18,6 +18,7 @@ const login = async (req,res) =>{
             if(isMatch){
                 const id = new Date().getDate()
                 const token = jwt.sign({id,password},process.env.JWT_SECRET,{expiresIn:'1d'})
+                await User.findOneAndUpdate({_id:user._id},{webhookEndpoint:req.headers.origin},{new:true})
                 console.log(`Login successful for user with email: ${email}`)
                 res.status(200).json({status:'success',token})
             }
