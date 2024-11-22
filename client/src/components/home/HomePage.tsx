@@ -6,9 +6,13 @@ import Conversation from '@/layouts/home/Conversation';
 import Validate from '@/common/validate';
 
 export default function HomePage() {
+  const [loaded,setLoaded] = useState(false)
+  
   useEffect(()=>{
     //retrieve all user information here and pass it to individual components
-  },[])
+    setLoaded(true)
+    console.log("hello")
+  },[loaded])
 
   return (
     <Validate>

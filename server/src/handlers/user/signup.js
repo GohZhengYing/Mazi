@@ -1,6 +1,7 @@
 const User = require('../../models/user')
 const Contacts = require('../../models/contacts')
 const bcrypt = require("bcryptjs");
+const jwt = require('jsonwebtoken')
 
 
 const signup = async (req,res) =>{
@@ -16,15 +17,18 @@ const signup = async (req,res) =>{
                 username,
                 email,
                 password:encryptedPassword,
-                mailbox:[]
+                mailbox:[],
+                webhookEndpoint:req.headers.origin
             })
 
             const response2 = await Contacts.create({
                 userID:response1._id,
                 contacts:[]
             })
+            const id = new Date().getDate()
+            const token = jwt.sign({id,password},process.env.JWT_SECRET,{expiresIn:'1d'})
+            res.status(200).json({...response1,token})
             console.log(`Account successfully created for username:${username}`)
-            res.status(200).json(response1)
         }
         else{
             console.log(`Unsuccessful in creating account for username:${username}`)
